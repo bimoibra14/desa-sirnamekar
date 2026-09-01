@@ -297,7 +297,7 @@
 @section('content')
 
 {{-- ===== HERO ===== --}}
-<section class="hero-home">
+<section class="hero-home" style="background-image: url('{{ asset('images/kantor-desa-sirnamekar.png') }}');">
     <div class="hero-overlay"></div>
     <div class="container hero-content">
         <div class="row">
