@@ -1,0 +1,1055 @@
+/* =====================================================
+   HALAMAN PROFIL DESA SIRNAMEKAR
+===================================================== */
+
+
+/* =========================
+   HERO PROFIL
+========================= */
+
+.profile-hero {
+    position: relative;
+
+    min-height: 390px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        url('../images/hero-sirnamekar.jpg')
+        center / cover no-repeat;
+
+    color: white;
+}
+
+
+.profile-hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 48, 25, .95),
+            rgba(13, 96, 52, .72),
+            rgba(7, 53, 29, .28)
+        );
+}
+
+
+.profile-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+}
+
+
+.profile-hero-badge {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    padding: 8px 16px;
+
+    border:
+        1px solid rgba(255,255,255,.28);
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.13);
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.profile-hero h1 {
+    margin-bottom: 14px;
+
+    color: white;
+
+    font-family:
+        'Poppins',
+        sans-serif;
+
+    font-size:
+        clamp(40px, 6vw, 61px);
+
+    font-weight: 800;
+
+    line-height: 1.15;
+}
+
+
+.profile-hero p {
+    max-width: 720px;
+
+    margin-bottom: 20px;
+
+    color:
+        rgba(255,255,255,.82);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+.profile-breadcrumb {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 13px;
+}
+
+
+.profile-breadcrumb a {
+    color: white;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.profile-breadcrumb a:hover {
+    color: #d8f3df;
+}
+
+
+.profile-breadcrumb i {
+    color:
+        rgba(255,255,255,.70);
+}
+
+
+.profile-breadcrumb span {
+    color:
+        rgba(255,255,255,.65);
+}
+
+
+/* =========================
+   GAMBARAN UMUM
+========================= */
+
+.profile-page-image {
+    position: relative;
+}
+
+
+.profile-page-image > img {
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.profile-page-badge {
+    position: absolute;
+
+    right: -18px;
+
+    bottom: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 18px 22px;
+
+    border-radius: 14px;
+
+    background: white;
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.profile-page-badge i {
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        var(--primary-light);
+
+    color:
+        var(--primary);
+
+    font-size: 22px;
+}
+
+
+.profile-page-badge strong,
+.profile-page-badge small {
+    display: block;
+}
+
+
+.profile-page-badge small {
+    margin-top: 2px;
+
+    color:
+        var(--text);
+}
+
+
+/* =========================
+   SEJARAH
+========================= */
+
+.profile-story-box {
+    padding: 55px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 25px;
+
+    background: white;
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.history-timeline {
+    position: relative;
+
+    padding-left: 20px;
+}
+
+
+.history-timeline::before {
+    content: "";
+
+    position: absolute;
+
+    top: 10px;
+
+    bottom: 10px;
+
+    left: 54px;
+
+    width: 2px;
+
+    background:
+        #d7e7dd;
+}
+
+
+.history-item {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        80px 1fr;
+
+    gap: 25px;
+
+    margin-bottom: 35px;
+}
+
+
+.history-item:last-child {
+    margin-bottom: 0;
+}
+
+
+.history-year {
+    position: relative;
+
+    z-index: 2;
+
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--primary-dark)
+        );
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(23,107,58,.20);
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+
+.history-content {
+    padding-top: 7px;
+}
+
+
+.history-content h4 {
+    margin-bottom: 10px;
+
+    font-family:
+        'Poppins',
+        sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+
+.history-content p {
+    margin: 0;
+
+    color:
+        var(--text);
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   VISI MISI
+========================= */
+
+.vision-card,
+.mission-card {
+    height: 100%;
+
+    padding: 38px;
+
+    border-radius: 22px;
+
+    transition: .3s;
+}
+
+
+.vision-card {
+    border: none;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--primary),
+            var(--primary-dark)
+        );
+
+    color: white;
+
+    box-shadow:
+        0 18px 40px rgba(23,107,58,.15);
+}
+
+
+.mission-card {
+    border:
+        1px solid var(--border);
+
+    background: white;
+
+    box-shadow:
+        0 12px 35px rgba(20,70,40,.06);
+}
+
+
+.vision-card:hover,
+.mission-card:hover {
+    transform:
+        translateY(-5px);
+}
+
+
+.vision-icon {
+    width: 58px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 15px;
+
+    background:
+        var(--primary-light);
+
+    color:
+        var(--primary);
+
+    font-size: 25px;
+}
+
+
+.vision-card .vision-icon {
+    background:
+        rgba(255,255,255,.14);
+
+    color: white;
+}
+
+
+.vision-card span,
+.mission-card span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.vision-card span {
+    color:
+        #a8e0ba;
+}
+
+
+.mission-card span {
+    color:
+        var(--primary);
+}
+
+
+.vision-card h3,
+.mission-card h3 {
+    font-family:
+        'Poppins',
+        sans-serif;
+
+    font-size: 24px;
+
+    font-weight: 700;
+}
+
+
+.vision-card p {
+    margin-top: 20px;
+
+    color:
+        rgba(255,255,255,.80);
+
+    line-height: 1.8;
+}
+
+
+.mission-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 20px;
+}
+
+
+.mission-title .vision-icon {
+    margin: 0;
+}
+
+
+.mission-list {
+    display: grid;
+
+    gap: 15px;
+}
+
+
+.mission-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    border:
+        1px solid #edf2ef;
+
+    border-radius: 12px;
+
+    background:
+        var(--soft);
+
+    transition: .25s;
+}
+
+
+.mission-item:hover {
+    background:
+        var(--primary-light);
+}
+
+
+.mission-item i {
+    margin-top: 2px;
+
+    color:
+        var(--primary);
+}
+
+
+.mission-item p {
+    margin: 0;
+
+    color:
+        var(--text);
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   DUSUN
+========================= */
+
+.profile-dusun-card {
+    position: relative;
+
+    height: 100%;
+
+    padding: 32px 27px;
+
+    overflow: hidden;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    background: white;
+
+    transition: .3s;
+}
+
+
+.profile-dusun-card:hover {
+    transform:
+        translateY(-7px);
+
+    border-color:
+        transparent;
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.profile-dusun-number {
+    position: absolute;
+
+    top: 8px;
+
+    right: 16px;
+
+    color:
+        #edf2ef;
+
+    font-size: 46px;
+
+    font-weight: 800;
+}
+
+
+.profile-dusun-icon {
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 14px;
+
+    background:
+        var(--primary-light);
+
+    color:
+        var(--primary);
+
+    font-size: 23px;
+}
+
+
+.profile-dusun-card h4 {
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+.profile-dusun-card p {
+    margin: 0;
+
+    color:
+        var(--text);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   GEOGRAFIS
+========================= */
+
+.geography-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+.geo-card {
+    min-height: 175px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    padding: 28px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    background: white;
+
+    transition: .3s;
+}
+
+
+.geo-card:hover {
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.geo-card i {
+    margin-bottom: 15px;
+
+    color:
+        var(--primary);
+
+    font-size: 30px;
+}
+
+
+.geo-card span {
+    margin-bottom: 5px;
+
+    color:
+        var(--text);
+
+    font-size: 13px;
+}
+
+
+.geo-card strong {
+    font-size: 21px;
+}
+
+
+/* =========================
+   POTENSI DESA
+========================= */
+
+.potential-profile-section {
+    background:
+        linear-gradient(
+            135deg,
+            #084324,
+            #176d3b
+        );
+}
+
+
+.potential-profile-image {
+    width: 100%;
+
+    height: 460px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 30px 60px
+        rgba(0,0,0,.18);
+}
+
+
+.potential-profile-text {
+    color:
+        rgba(255,255,255,.78);
+
+    line-height: 1.9;
+}
+
+
+/* =========================
+   DATA KEPENDUDUKAN
+========================= */
+
+.profile-stat-card {
+    height: 100%;
+
+    padding: 30px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    background: white;
+
+    text-align: center;
+
+    transition: .3s;
+}
+
+
+.profile-stat-card:hover {
+    transform:
+        translateY(-6px);
+
+    border-color:
+        transparent;
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.profile-stat-icon {
+    width: 58px;
+
+    height: 58px;
+
+    margin:
+        0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background:
+        var(--primary-light);
+
+    color:
+        var(--primary);
+
+    font-size: 25px;
+}
+
+
+.profile-stat-card h3 {
+    margin-bottom: 5px;
+
+    color:
+        var(--primary-dark);
+
+    font-size: 28px;
+
+    font-weight: 800;
+}
+
+
+.profile-stat-card p {
+    margin: 0;
+
+    color:
+        var(--text);
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   CTA PEMERINTAHAN
+========================= */
+
+.profile-government-cta {
+    padding:
+        20px 0 90px;
+}
+
+
+.profile-government-box {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    padding: 50px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-dark),
+            var(--primary)
+        );
+
+    color: white;
+
+    box-shadow:
+        0 20px 45px rgba(23,107,58,.13);
+}
+
+
+.profile-government-box span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color:
+        #a9e2bc;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.profile-government-box h2 {
+    max-width: 680px;
+
+    margin-bottom: 12px;
+
+    font-family:
+        'Poppins',
+        sans-serif;
+
+    font-size:
+        clamp(27px,4vw,36px);
+
+    font-weight: 700;
+}
+
+
+.profile-government-box p {
+    margin: 0;
+
+    color:
+        rgba(255,255,255,.72);
+}
+
+
+.btn-profile-government {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+
+    padding: 14px 22px;
+
+    border-radius: 9px;
+
+    background: white;
+
+    color:
+        var(--primary-dark);
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+
+.btn-profile-government:hover {
+    color:
+        var(--primary-dark);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 991px) {
+
+    .profile-page-badge {
+        right: 15px;
+    }
+
+
+    .profile-story-box {
+        padding: 38px 28px;
+    }
+
+
+    .profile-government-box {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}
+
+
+@media(max-width: 576px) {
+
+    .profile-hero {
+        min-height: 340px;
+    }
+
+
+    .profile-hero h1 {
+        font-size: 37px;
+    }
+
+
+    .profile-page-image > img {
+        height: 350px;
+    }
+
+
+    .profile-page-badge {
+        position: relative;
+
+        right: auto;
+
+        bottom: auto;
+
+        margin:
+            -35px 18px 0;
+    }
+
+
+    .profile-story-box {
+        padding: 30px 20px;
+    }
+
+
+    .history-timeline {
+        padding-left: 0;
+    }
+
+
+    .history-timeline::before {
+        display: none;
+    }
+
+
+    .history-item {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .vision-card,
+    .mission-card {
+        padding: 28px 22px;
+    }
+
+
+    .geography-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .potential-profile-image {
+        height: 330px;
+    }
+
+
+    .profile-government-box {
+        padding: 35px 25px;
+    }
+
+
+    .btn-profile-government {
+        width: 100%;
+    }
+
+}

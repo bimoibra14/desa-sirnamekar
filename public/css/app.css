@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap');
+
+:root {
+    --primary: #176b3a;
+    --primary-dark: #0e4e2a;
+    --primary-light: #e9f6ee;
+
+    --accent: #f5b942;
+
+    --dark: #17251c;
+    --text: #657068;
+
+    --white: #ffffff;
+    --soft: #f5f8f6;
+
+    --border: #e1e9e4;
+
+    --shadow:
+        0 15px 45px rgba(20, 70, 40, 0.10);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: white;
+    color: var(--dark);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ===============================
+   SECTION UMUM
+================================ */
+
+.section-space {
+    padding: 100px 0;
+}
+
+.bg-soft {
+    background: var(--soft);
+}
+
+.section-label {
+    display: inline-block;
+    margin-bottom: 12px;
+
+    color: var(--primary);
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.section-label.light {
+    color: #a9e2bc;
+}
+
+.section-title {
+    margin-bottom: 22px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(31px, 4vw, 45px);
+
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.section-title span {
+    color: var(--primary);
+}
+
+.section-description {
+    color: var(--text);
+
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.section-heading p {
+    max-width: 650px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    color: var(--text);
+}
+
+/* ===============================
+   BUTTON UMUM
+================================ */
+
+.btn-main {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 13px 25px;
+
+    border-radius: 9px;
+
+    background: var(--primary);
+    color: white;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.btn-main:hover {
+    background: var(--primary-dark);
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+.btn-light-custom {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 13px 25px;
+
+    border-radius: 9px;
+
+    background: white;
+    color: var(--primary-dark);
+
+    font-weight: 700;
+
+    transition: .3s;
+}
+
+.btn-light-custom:hover {
+    color: var(--primary-dark);
+
+    transform: translateY(-3px);
+}
+
+.more-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--primary);
+
+    font-weight: 700;
+}
+
+/* ===============================
+   RESPONSIVE GLOBAL
+================================ */
+
+@media (max-width: 991px) {
+
+    .section-space {
+        padding: 75px 0;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .section-space {
+        padding: 65px 0;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+}

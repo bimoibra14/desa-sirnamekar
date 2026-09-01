@@ -1,0 +1,305 @@
+/* ==========================================
+   PETA GIS DESA SIRNAMEKAR
+========================================== */
+
+
+/* HERO */
+
+.gis-hero {
+    position: relative;
+    min-height: 390px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        url('../images/hero-sirnamekar.jpg')
+        center / cover no-repeat;
+
+    color: white;
+}
+
+
+.gis-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 48, 25, .95),
+            rgba(13, 96, 52, .72),
+            rgba(7, 53, 29, .28)
+        );
+}
+
+
+.gis-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+}
+
+
+.gis-hero-badge {
+    display: inline-block;
+
+    margin-bottom: 18px;
+    padding: 8px 16px;
+
+    border: 1px solid rgba(255,255,255,.28);
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.13);
+
+    color: white;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.gis-hero h1 {
+    margin-bottom: 14px;
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: clamp(40px, 6vw, 61px);
+    font-weight: 800;
+
+    line-height: 1.15;
+}
+
+
+.gis-hero p {
+    max-width: 720px;
+
+    margin-bottom: 20px;
+
+    color: rgba(255,255,255,.82);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+.gis-breadcrumb {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 13px;
+}
+
+
+.gis-breadcrumb a {
+    color: white;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.gis-breadcrumb span,
+.gis-breadcrumb i {
+    color: rgba(255,255,255,.65);
+}
+
+
+/* =========================
+   BAGIAN PETA
+========================= */
+
+.gis-section {
+    padding: 90px 0;
+
+    background: #f7faf8;
+}
+
+
+.gis-map-card {
+    margin-top: 45px;
+
+    overflow: hidden;
+
+    border: 1px solid #dce9e0;
+
+    border-radius: 24px;
+
+    background: white;
+
+    box-shadow:
+        0 18px 50px rgba(20,70,40,.10);
+}
+
+
+/* HEADER PETA */
+
+.gis-map-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px 25px;
+
+    border-bottom: 1px solid #e6eee9;
+}
+
+
+.gis-map-header > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.gis-map-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: var(--primary-light);
+
+    color: var(--primary);
+
+    font-size: 21px;
+}
+
+
+.gis-map-header h4 {
+    margin: 0 0 3px;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+
+.gis-map-header p {
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 12px;
+}
+
+
+.gis-map-status {
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    background: #eaf6ee;
+
+    color: var(--primary);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   GAMBAR QGIS
+========================= */
+
+.gis-map-image {
+    padding: 15px;
+
+    background: #eef3f0;
+}
+
+
+.gis-map-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 12px;
+}
+
+
+/* =========================
+   INFORMASI
+========================= */
+
+.gis-map-footer {
+    padding: 22px 25px;
+}
+
+
+.gis-info {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+}
+
+
+.gis-info > i {
+    color: var(--primary);
+
+    font-size: 22px;
+}
+
+
+.gis-info strong {
+    display: block;
+
+    margin-bottom: 4px;
+}
+
+
+.gis-info p {
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width: 768px) {
+
+    .gis-hero {
+        min-height: 340px;
+    }
+
+    .gis-hero h1 {
+        font-size: 37px;
+    }
+
+    .gis-section {
+        padding: 65px 0;
+    }
+
+    .gis-map-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}

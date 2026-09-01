@@ -1,0 +1,728 @@
+/* =====================================================
+   HALAMAN BERITA DESA SIRNAMEKAR
+===================================================== */
+
+
+/* =========================
+   HERO
+========================= */
+
+.news-hero {
+    position: relative;
+
+    min-height: 390px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        url('../images/hero-sirnamekar.jpg')
+        center / cover no-repeat;
+
+    color: white;
+}
+
+
+.news-hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5,48,25,.95),
+            rgba(13,96,52,.72),
+            rgba(7,53,29,.28)
+        );
+}
+
+
+.news-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+}
+
+
+.news-hero-badge {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    padding: 8px 16px;
+
+    border:
+        1px solid rgba(255,255,255,.28);
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.13);
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.news-hero h1 {
+    margin-bottom: 14px;
+
+    font-family:
+        'Poppins',
+        sans-serif;
+
+    font-size:
+        clamp(40px,6vw,61px);
+
+    font-weight: 800;
+
+    line-height: 1.15;
+}
+
+
+.news-hero p {
+    max-width: 720px;
+
+    margin-bottom: 20px;
+
+    color:
+        rgba(255,255,255,.82);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+.news-breadcrumb {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 13px;
+}
+
+
+.news-breadcrumb a {
+    color: white;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.news-breadcrumb a:hover {
+    color: #d8f3df;
+}
+
+
+.news-breadcrumb span,
+.news-breadcrumb i {
+    color:
+        rgba(255,255,255,.65);
+}
+
+
+/* =========================
+   BERITA UTAMA
+========================= */
+
+.featured-news {
+    overflow: hidden;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 25px;
+
+    background: white;
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.featured-news-image {
+    position: relative;
+
+    height: 460px;
+
+    overflow: hidden;
+}
+
+
+.featured-news-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.featured-category {
+    position: absolute;
+
+    left: 20px;
+
+    bottom: 20px;
+
+    padding:
+        7px 14px;
+
+    border-radius: 20px;
+
+    background:
+        var(--primary);
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.featured-news-content {
+    padding: 45px;
+}
+
+
+.news-meta {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    margin-bottom: 20px;
+
+    color:
+        var(--text);
+
+    font-size: 12px;
+}
+
+
+.news-meta span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.news-meta i {
+    color:
+        var(--primary);
+}
+
+
+.featured-news-content h2 {
+    margin-bottom: 17px;
+
+    font-family:
+        'Poppins',
+        sans-serif;
+
+    font-size:
+        clamp(28px,4vw,38px);
+
+    font-weight: 700;
+
+    line-height: 1.35;
+}
+
+
+.featured-news-content p {
+    color:
+        var(--text);
+
+    font-size: 14px;
+
+    line-height: 1.85;
+}
+
+
+.news-read-more {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 8px;
+
+    color:
+        var(--primary);
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+/* =========================
+   HEADER DAFTAR BERITA
+========================= */
+
+.news-section-header {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.news-search {
+    position: relative;
+
+    width: 300px;
+}
+
+
+.news-search i {
+    position: absolute;
+
+    top: 50%;
+
+    left: 15px;
+
+    transform:
+        translateY(-50%);
+
+    color:
+        var(--text);
+}
+
+
+.news-search input {
+    width: 100%;
+
+    padding:
+        12px 15px 12px 42px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: white;
+}
+
+
+.news-search input:focus {
+    border-color:
+        var(--primary);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(23,107,58,.08);
+}
+
+
+/* =========================
+   CARD BERITA
+========================= */
+
+.news-card {
+    height: 100%;
+
+    overflow: hidden;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    background: white;
+
+    transition: .3s;
+}
+
+
+.news-card:hover {
+    transform:
+        translateY(-7px);
+
+    border-color: transparent;
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.news-card-image {
+    position: relative;
+
+    height: 230px;
+
+    overflow: hidden;
+}
+
+
+.news-card-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .5s;
+}
+
+
+.news-card:hover
+.news-card-image img {
+    transform:
+        scale(1.06);
+}
+
+
+.news-card-image span {
+    position: absolute;
+
+    left: 15px;
+
+    bottom: 15px;
+
+    padding:
+        6px 12px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(23,107,58,.94);
+
+    color: white;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.news-card-body {
+    padding: 23px;
+}
+
+
+.news-card-date {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 10px;
+
+    color:
+        var(--text);
+
+    font-size: 11px;
+}
+
+
+.news-card-date i {
+    color:
+        var(--primary);
+}
+
+
+.news-card-body h3 {
+    margin-bottom: 11px;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    line-height: 1.45;
+}
+
+
+.news-card-body p {
+    color:
+        var(--text);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+.news-card-body a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color:
+        var(--primary);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+/* =========================
+   PENGUMUMAN
+========================= */
+
+.announcement-list {
+    display: grid;
+
+    gap: 17px;
+
+    margin-top: 30px;
+}
+
+
+.announcement-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 23px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 16px;
+
+    background: white;
+
+    transition: .3s;
+}
+
+
+.announcement-item:hover {
+    transform:
+        translateX(5px);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.announcement-icon {
+    width: 53px;
+
+    height: 53px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 13px;
+
+    background:
+        var(--primary-light);
+
+    color:
+        var(--primary);
+
+    font-size: 22px;
+}
+
+
+.announcement-item small {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color:
+        var(--primary);
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.announcement-item h4 {
+    margin-bottom: 6px;
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+.announcement-item p {
+    margin: 0;
+
+    color:
+        var(--text);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   INFO BOX
+========================= */
+
+.news-info-box {
+    height: 100%;
+
+    padding: 38px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--primary),
+            var(--primary-dark)
+        );
+
+    color: white;
+}
+
+
+.news-info-icon {
+    width: 64px;
+
+    height: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 16px;
+
+    background:
+        rgba(255,255,255,.13);
+
+    font-size: 27px;
+}
+
+
+.news-info-box h3 {
+    margin-bottom: 15px;
+
+    font-family:
+        'Poppins',
+        sans-serif;
+
+    font-size: 27px;
+
+    font-weight: 700;
+}
+
+
+.news-info-box p {
+    margin-bottom: 25px;
+
+    color:
+        rgba(255,255,255,.77);
+
+    line-height: 1.8;
+}
+
+
+.news-info-box .btn-global {
+    background: white;
+
+    color:
+        var(--primary-dark);
+}
+
+
+.news-info-box .btn-global:hover {
+    color:
+        var(--primary-dark);
+
+    background:
+        #f4f4f4;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 991px) {
+
+    .featured-news-image {
+        height: 380px;
+    }
+
+
+    .news-section-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .news-search {
+        width: 100%;
+    }
+
+}
+
+
+@media(max-width: 576px) {
+
+    .news-hero {
+        min-height: 340px;
+    }
+
+
+    .news-hero h1 {
+        font-size: 37px;
+    }
+
+
+    .featured-news-image {
+        height: 280px;
+    }
+
+
+    .featured-news-content {
+        padding: 28px 22px;
+    }
+
+
+    .news-card-image {
+        height: 210px;
+    }
+
+
+    .news-info-box {
+        padding: 30px 23px;
+    }
+
+}

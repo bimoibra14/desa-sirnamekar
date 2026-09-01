@@ -1,0 +1,443 @@
+/* ==========================================
+   GALERI DESA SIRNAMEKAR
+========================================== */
+
+
+/* ================= HERO ================= */
+
+.galeri-hero {
+    position: relative;
+    min-height: 390px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        url('../images/hero-sirnamekar.jpg')
+        center / cover no-repeat;
+
+    overflow: hidden;
+    color: #fff;
+}
+
+
+.galeri-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(5, 48, 25, .96),
+        rgba(15, 104, 57, .75),
+        rgba(7, 53, 29, .25)
+    );
+}
+
+
+.galeri-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 800px;
+}
+
+
+.galeri-badge {
+    display: inline-block;
+
+    padding: 8px 17px;
+    margin-bottom: 18px;
+
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.13);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.galeri-hero h1 {
+    margin-bottom: 15px;
+
+    font-size: clamp(40px, 6vw, 62px);
+    font-weight: 800;
+    line-height: 1.15;
+
+    color: #fff;
+}
+
+
+.galeri-hero p {
+    max-width: 700px;
+
+    margin-bottom: 20px;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    color: rgba(255,255,255,.82);
+}
+
+
+.galeri-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 13px;
+}
+
+
+.galeri-breadcrumb a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+.galeri-breadcrumb span,
+.galeri-breadcrumb i {
+    color: rgba(255,255,255,.65);
+}
+
+
+/* ================= GALERI ================= */
+
+.galeri-section {
+    padding: 90px 0;
+
+    background: #f7faf8;
+}
+
+
+.galeri-heading {
+    max-width: 750px;
+
+    margin: 0 auto 40px;
+}
+
+
+.galeri-heading h2 {
+    margin-top: 10px;
+
+    font-size: clamp(31px, 4vw, 45px);
+    font-weight: 800;
+
+    color: #16251c;
+}
+
+
+.galeri-heading h2 span {
+    color: #176b3a;
+}
+
+
+.galeri-heading p {
+    max-width: 600px;
+
+    margin: 15px auto 0;
+
+    color: #6c757d;
+
+    line-height: 1.8;
+}
+
+
+/* ================= FILTER ================= */
+
+.galeri-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 40px;
+}
+
+
+.filter-btn {
+    padding: 10px 19px;
+
+    border: 1px solid #dbe6df;
+    border-radius: 30px;
+
+    background: #fff;
+
+    color: #4c5b51;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+
+.filter-btn:hover,
+.filter-btn.active {
+    border-color: #176b3a;
+
+    background: #176b3a;
+
+    color: #fff;
+}
+
+
+/* ================= CARD ================= */
+
+.galeri-card {
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #fff;
+
+    box-shadow:
+        0 8px 30px rgba(20, 70, 40, .08);
+
+    transition: .3s;
+}
+
+
+.galeri-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 18px 45px rgba(20, 70, 40, .15);
+}
+
+
+.galeri-image {
+    position: relative;
+
+    height: 300px;
+
+    overflow: hidden;
+}
+
+
+.galeri-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .5s ease;
+}
+
+
+.galeri-card:hover img {
+    transform: scale(1.08);
+}
+
+
+/* ================= HOVER FOTO ================= */
+
+.galeri-hover {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    padding: 25px;
+
+    opacity: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(4, 48, 24, .92),
+        rgba(4, 48, 24, .15),
+        transparent
+    );
+
+    transition: .3s;
+}
+
+
+.galeri-card:hover .galeri-hover {
+    opacity: 1;
+}
+
+
+.galeri-hover span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #bce9c9;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+
+.galeri-hover h3 {
+    margin: 0;
+
+    color: #fff;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+.galeri-hover > i {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.18);
+
+    color: #fff;
+
+    font-size: 17px;
+}
+
+
+/* ================= CTA ================= */
+
+.galeri-cta {
+    padding: 0 0 90px;
+
+    background: #f7faf8;
+}
+
+
+.galeri-cta-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    padding: 45px 50px;
+
+    border-radius: 25px;
+
+    background: linear-gradient(
+        135deg,
+        #176b3a,
+        #0b4726
+    );
+
+    color: #fff;
+}
+
+
+.galeri-cta-box span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #bce9c9;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.galeri-cta-box h2 {
+    margin-bottom: 8px;
+
+    color: #fff;
+
+    font-size: 29px;
+    font-weight: 700;
+}
+
+
+.galeri-cta-box p {
+    margin: 0;
+
+    color: rgba(255,255,255,.72);
+}
+
+
+.galeri-cta-btn {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+
+    padding: 13px 21px;
+
+    border-radius: 10px;
+
+    background: #fff;
+
+    color: #176b3a;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+
+.galeri-cta-btn:hover {
+    transform: translateY(-2px);
+
+    color: #0b4726;
+
+    background: #f1f7f3;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .galeri-hero {
+        min-height: 340px;
+    }
+
+
+    .galeri-hero h1 {
+        font-size: 38px;
+    }
+
+
+    .galeri-section {
+        padding: 65px 0;
+    }
+
+
+    .galeri-image {
+        height: 260px;
+    }
+
+
+    .galeri-hover {
+        opacity: 1;
+    }
+
+
+    .galeri-cta-box {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 32px 25px;
+    }
+
+}
