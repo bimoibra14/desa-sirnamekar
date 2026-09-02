@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/desn4385/laravel-desa/desa-sirnamekar
+    - export DEPLOYPATH=/home/desn4385/repositories/desa-sirnamekar
     - /bin/cp -r * $DEPLOYPATH
     - /bin/cp -r .* $DEPLOYPATH
