@@ -1,7 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/desn4385/public_html/
-    - shopt -s dotglob
+    - export DEPLOYPATH=/home/desn4385/laravel-desa/desa-sirnamekar
     - /bin/cp -r * $DEPLOYPATH
-    - shopt -u dotglob
+    - /bin/cp -r .* $DEPLOYPATH
