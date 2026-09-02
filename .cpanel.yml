@@ -1,6 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/desn4385/repositories-desa/desa-sirnamekar
+    - export DEPLOYPATH=/home/desn4385/public_html/
+    - shopt -s dotglob
     - /bin/cp -r * $DEPLOYPATH
-    - /bin/cp -r .* $DEPLOYPATH
+    - shopt -u dotglob
