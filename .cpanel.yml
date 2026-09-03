@@ -1,18 +1,15 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/desn4385/laravel-desa/desa-sirnamekar/
-    - /bin/cp -R app $DEPLOYPATH
-    - /bin/cp -R bootstrap $DEPLOYPATH
-    - /bin/cp -R config $DEPLOYPATH
-    - /bin/cp -R database $DEPLOYPATH
-    - /bin/cp -R public $DEPLOYPATH
-    - /bin/cp -R resources $DEPLOYPATH
-    - /bin/cp -R routes $DEPLOYPATH
-    - /bin/cp -R storage $DEPLOYPATH
-    - /bin/cp -R tests $DEPLOYPATH
-    - /bin/cp artisan $DEPLOYPATH
+    - export DEPLOYPATH=/home/desn4385/laravel-desa/desa-sirnamekar
+    - /bin/cp -rf app $DEPLOYPATH
+    - /bin/cp -rf bootstrap $DEPLOYPATH
+    - /bin/cp -rf config $DEPLOYPATH
+    - /bin/cp -rf database $DEPLOYPATH
+    - /bin/cp -rf public $DEPLOYPATH
+    - /bin/cp -rf resources $DEPLOYPATH
+    - /bin/cp -rf routes $DEPLOYPATH
+    - /bin/cp -rf storage $DEPLOYPATH
+    - /bin/cp -rf vendor $DEPLOYPATH
     - /bin/cp composer.json $DEPLOYPATH
-    - /bin/cp composer.lock $DEPLOYPATH
-    - /bin/cp package.json $DEPLOYPATH
-    - /bin/cp vite.config.js $DEPLOYPATH
+    - /bin/cp artisan $DEPLOYPATH
