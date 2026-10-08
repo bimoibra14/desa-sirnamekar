@@ -4,7 +4,6 @@
 
         {{-- BRAND --}}
         <a class="navbar-brand d-flex align-items-center gap-2" href="{{ url('/') }}">
-
             <div class="brand-icon">
                 <i class="bi bi-buildings-fill"></i>
             </div>
@@ -12,9 +11,7 @@
             <div class="brand-text">
                 <strong>DESA SIRNAMEKAR</strong>
             </div>
-
         </a>
-
 
         {{-- MOBILE BUTTON --}}
         <button
@@ -29,12 +26,12 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-
         {{-- MENU --}}
         <div class="collapse navbar-collapse" id="navbarDesa">
 
             <ul class="navbar-nav ms-auto align-items-lg-center">
 
+                {{-- BERANDA --}}
                 <li class="nav-item">
                     <a
                         class="nav-link {{ request()->is('/') ? 'active' : '' }}"
@@ -44,6 +41,7 @@
                     </a>
                 </li>
 
+                {{-- PROFIL --}}
                 <li class="nav-item">
                     <a
                         class="nav-link {{ request()->is('profil*') ? 'active' : '' }}"
@@ -53,6 +51,7 @@
                     </a>
                 </li>
 
+                {{-- PEMERINTAHAN --}}
                 <li class="nav-item">
                     <a
                         class="nav-link {{ request()->is('pemerintahan*') ? 'active' : '' }}"
@@ -62,6 +61,7 @@
                     </a>
                 </li>
 
+                {{-- POTENSI --}}
                 <li class="nav-item">
                     <a
                         class="nav-link {{ request()->is('potensi*') ? 'active' : '' }}"
@@ -71,6 +71,7 @@
                     </a>
                 </li>
 
+                {{-- PETA GIS --}}
                 <li class="nav-item">
                     <a
                         class="nav-link gis-menu {{ request()->is('peta-gis*') ? 'active' : '' }}"
@@ -81,6 +82,7 @@
                     </a>
                 </li>
 
+                {{-- BERITA --}}
                 <li class="nav-item">
                     <a
                         class="nav-link {{ request()->is('berita*') ? 'active' : '' }}"
@@ -90,6 +92,7 @@
                     </a>
                 </li>
 
+                {{-- GALERI --}}
                 <li class="nav-item">
                     <a
                         class="nav-link {{ request()->is('galeri*') ? 'active' : '' }}"
@@ -99,6 +102,7 @@
                     </a>
                 </li>
 
+                {{-- KONTAK --}}
                 <li class="nav-item">
                     <a
                         class="nav-link {{ request()->is('kontak*') ? 'active' : '' }}"
@@ -120,71 +124,78 @@
             </a>
 
         </div>
-
     </div>
-
 </nav>
+
 
 {{-- ===== NAVBAR TRANSPARAN HANYA DI BERANDA ===== --}}
 @if(request()->is('/'))
+
 <style>
-/* Navbar transparan saat di atas hero */
-#mainNavbar {
-    background: transparent !important;
-    box-shadow: none !important;
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-}
+    /* Navbar transparan saat berada di atas hero */
+    #mainNavbar {
+        background: transparent !important;
+        box-shadow: none !important;
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
 
-/* Teks dan ikon jadi putih saat transparan */
-#mainNavbar .nav-link,
-#mainNavbar .brand-text strong,
-#mainNavbar .brand-icon i {
-    color: #ffffff !important;
-    transition: color 0.3s ease;
-}
+    /* Teks dan ikon putih saat navbar transparan */
+    #mainNavbar .nav-link,
+    #mainNavbar .brand-text strong,
+    #mainNavbar .brand-icon i {
+        color: #ffffff !important;
+        transition: color 0.3s ease;
+    }
 
-#mainNavbar .nav-link.active,
-#mainNavbar .nav-link:hover {
-    color: #e6a817 !important;
-}
+    /* Hover dan menu aktif */
+    #mainNavbar .nav-link.active,
+    #mainNavbar .nav-link:hover {
+        color: #e6a817 !important;
+    }
 
-/* Navbar solid saat di-scroll */
-#mainNavbar.scrolled {
-    background: #ffffff !important;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.1) !important;
-}
+    /* Navbar berubah putih saat scroll */
+    #mainNavbar.scrolled {
+        background: #ffffff !important;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1) !important;
+    }
 
-#mainNavbar.scrolled .nav-link,
-#mainNavbar.scrolled .brand-text strong,
-#mainNavbar.scrolled .brand-icon i {
-    color: #1a5c2e !important;
-}
+    /* Warna teks saat navbar sudah scroll */
+    #mainNavbar.scrolled .nav-link,
+    #mainNavbar.scrolled .brand-text strong,
+    #mainNavbar.scrolled .brand-icon i {
+        color: #1a5c2e !important;
+    }
 
-#mainNavbar.scrolled .nav-link.active,
-#mainNavbar.scrolled .nav-link:hover {
-    color: #e6a817 !important;
-}
+    /* Hover dan aktif saat sudah scroll */
+    #mainNavbar.scrolled .nav-link.active,
+    #mainNavbar.scrolled .nav-link:hover {
+        color: #e6a817 !important;
+    }
 
-/* Tambah padding body supaya konten tidak tertutup navbar fixed */
-body {
-    padding-top: 0 !important;
-}
+    /* Konten tidak tertutup navbar */
+    body {
+        padding-top: 0 !important;
+    }
 </style>
 
 <script>
-// Deteksi scroll — tambah class 'scrolled' saat user scroll ke bawah
-window.addEventListener('scroll', function() {
-    var navbar = document.getElementById('mainNavbar');
-    if (window.scrollY > 80) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
+    // Deteksi scroll
+    window.addEventListener('scroll', function () {
+        var navbar = document.getElementById('mainNavbar');
+
+        if (navbar) {
+            if (window.scrollY > 80) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }
+    });
 </script>
+
 @endif
