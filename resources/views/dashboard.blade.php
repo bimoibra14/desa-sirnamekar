@@ -11,8 +11,12 @@
 @section('content')
 
 {{-- ================= HERO ================= --}}
-<section class="hero-home"
-    style="background-image: url('{{ asset('images/kantor-desa-sirnamekar.png') }}');">
+<section class="hero-home">
+
+    {{-- VIDEO BACKGROUND --}}
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="{{ asset('videos/hero-video.mp4') }}" type="video/mp4">
+    </video>
 
     <div class="hero-overlay"></div>
 
@@ -52,10 +56,8 @@
 
                     <a href="{{ url('/peta-gis') }}"
                        class="btn-outline-custom">
-
                         <i class="bi bi-map-fill"></i>
                         Peta GIS
-
                     </a>
 
                 </div>
@@ -67,11 +69,8 @@
     </div>
 
     <div class="hero-scroll">
-
         <i class="bi bi-chevron-down"></i>
-
         <span>Scroll</span>
-
     </div>
 
 </section>
@@ -160,7 +159,7 @@
                     <div class="profil-image-wrap">
 
                         <img
-                            src="{{ asset('images/desa-sirnamekar.jpg') }}"
+                            src="{{ asset('images/kantor-desa-sirnamekar.png') }}"
                             alt="Desa Sirnamekar">
 
                         <span class="profil-image-badge">
@@ -458,7 +457,7 @@
                     <div class="official-photo">
 
                         <img
-                            src="{{ asset('images/kepala-desa.jpg') }}"
+                            src="{{ asset('images/kades.jpeg') }}"
                             alt="Kepala Desa">
 
                     </div>
@@ -483,7 +482,7 @@
                     <div class="official-photo">
 
                         <img
-                            src="{{ asset('images/sekretaris-desa.jpg') }}"
+                            src="{{ asset('images/sekdes.jpeg') }}"
                             alt="Sekretaris Desa">
 
                     </div>

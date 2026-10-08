@@ -1,7 +1,19 @@
 /* =====================================================
    DASHBOARD DESA SIRNAMEKAR
 ===================================================== */
-
+/* ===== VIDEO BACKGROUND ===== */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    object-fit: cover;
+}
 
 /* ================= HERO ================= */
 
@@ -26,13 +38,14 @@
 .hero-overlay {
     position: absolute;
     inset: 0;
+    background: transparent;
 
     background:
         linear-gradient(
-            120deg,
-            rgba(5,48,25,.94),
-            rgba(20,105,57,.66),
-            rgba(0,0,0,.25)
+            90deg,
+            rgba(0, 0, 0, .45) 0%,
+            rgba(0, 0, 0, .20) 55%,
+            rgba(0, 0, 0, .05) 100%
         );
 }
 
