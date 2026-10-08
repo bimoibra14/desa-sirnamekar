@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 
@@ -9,16 +10,23 @@
 
     <title>@yield('title', 'Desa Sirnamekar')</title>
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap 5.3.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/pemerintahan.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/potensi.css') }}">
+    <!-- CSS Utama -->
+    <link rel="stylesheet" href="{{ asset('app.css') }}">
 
+    <!-- CSS Navbar -->
+    <link rel="stylesheet" href="{{ asset('navbar.css') }}">
+
+    <!-- CSS Footer -->
+    <link rel="stylesheet" href="{{ asset('footer.css') }}">
+
+    <!-- CSS Pemerintahan -->
+    <link rel="stylesheet" href="{{ asset('pemerintahan.css') }}">
+
+    <!-- CSS Potensi -->
+    <link rel="stylesheet" href="{{ asset('potensi.css') }}">
 
     @yield('styles')
 
@@ -26,15 +34,21 @@
 
 <body>
 
-@include('layouts.navbar')
+    <!-- Navbar -->
+    @include('layouts.navbar')
 
-@yield('content')
+    <!-- Konten Halaman -->
+    @yield('content')
 
-@include('layouts.footer')
+    <!-- Footer -->
+    @include('layouts.footer')
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-@yield('scripts')
+    @yield('scripts')
 
-</body> 
+</body>
+
 </html>
+```
